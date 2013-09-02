@@ -4,7 +4,7 @@ analyzers:
   scenarios:
     type: GenericAnalyzer
     path: Scenarios_Nodes
-    find_and_remove_prefix: brsu_node_status_
+    find_and_remove_prefix: mcr_node_status_
 
   computers:
     type: AnalyzerGroup
