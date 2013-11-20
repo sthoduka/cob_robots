@@ -18,12 +18,6 @@
 	<group>
 		<machine name="pc1" address="cob3-1-pc1" env-loader="$(find brsu_bringup)/robots/env.sh" default="true" />
 
-		<!-- pc monitor -->
-		<include file="$(find cob_bringup)/tools/pc_monitor.launch" >
-			<arg name="robot" value="$(arg robot)" />
-			<arg name="pc" value="cob3_1_pc1" />
-		</include>
-
 		<!-- monitoring -->
 		<!--include file="$(find cob_bringup)/tools/wifi_monitor.launch" /-->
 
@@ -83,11 +77,6 @@
 	<group>
 		<machine name="pc2" address="cob3-1-pc2" env-loader="$(find brsu_bringup)/robots/env.sh" default="true"/>
 
-		<!-- pc monitor -->
-		<include file="$(find cob_bringup)/tools/pc_monitor.launch" >
-			<arg name="robot" value="$(arg robot)" />
-			<arg name="pc" value="cob3_1_pc2" />
-		</include>
 
 		<!-- start camera sensors -->
 		<!--include file="$(find cob_bringup)/components/pike_left.launch" >
