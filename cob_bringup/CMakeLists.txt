@@ -2,9 +2,10 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(cob_bringup)
 
+find_package(catkin REQUIRED COMPONENTS roslaunch)
 
 # rostest for robots
-SET(robotlist
+set(robotlist
 cob3-1
 cob3-2
 cob3-3
@@ -21,19 +22,22 @@ raw3-6
 desire
 )
 
-SET(envlist
+set(envlist
+empty
 ipa-kitchen
 ipa-apartment
+ipa-factory
 )
 
 # loop through list of robots for testing
-FOREACH(robot ${robotlist})
-	FOREACH(env ${envlist})
-		MESSAGE("testing for robot: ${robot} in env: ${env}")
+foreach(robot ${robotlist})
+	#foreach(env ${envlist})
+		message("testing for robot: ${robot} in env: ${env}")
 		#rosbuild_add_roslaunch_check(tools robot:=${robot} robot_env:=${env})
 		#rosbuild_add_roslaunch_check(tools ROBOT=${robot} ROBOT_ENV=${env})
-	ENDFOREACH(env)
-ENDFOREACH(robot)
+		roslaunch_add_file_check(robots/${robot}.xml robot_env:=ipa-apartment)
+	#endforeach(env)
+endforeach(robot)
 
 
 ##rosbuild_add_roslaunch_check(ros/launch/sim.launch ROBOT=cob3-3 ROBOT_ENV=ipa-kitchen)
@@ -49,17 +53,25 @@ ENDFOREACH(robot)
 catkin_package()
 
 ## Mark cpp header files for installation
-install(DIRECTORY robots/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/robots
+install(DIRECTORY robots
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
 ## Mark cpp header files for installation
-install(DIRECTORY components/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/components
+install(DIRECTORY drivers
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
 ## Mark cpp header files for installation#
-install(DIRECTORY tools/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/tools
+install(DIRECTORY tools
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(PROGRAMS env.sh
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(FILES robot.launch
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
