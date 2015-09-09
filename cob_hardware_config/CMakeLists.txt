@@ -25,12 +25,14 @@ desire
 )
 
 # loop through list of robots for testing
-foreach(robot ${robotlist})
-    message("testing for robot: ${robot}")
-    #roslaunch_add_file_check(common robot:=${robot})
-    #rosbuild_add_roslaunch_check(common ROBOT=${robot})
-    add_rostest(test/urdf_${robot}.test)
-endforeach(robot)
+if(CATKIN_ENABLE_TESTING)
+    foreach(robot ${robotlist})
+        message("testing for robot: ${robot}")
+        #roslaunch_add_file_check(common robot:=${robot})
+        #rosbuild_add_roslaunch_check(common ROBOT=${robot})
+        add_rostest(test/urdf_${robot}.test)
+    endforeach(robot)
+endif()
 
 catkin_package(
     CATKIN_DEPENDS cob_calibration_data cob_description raw_description schunk_description ur_description
