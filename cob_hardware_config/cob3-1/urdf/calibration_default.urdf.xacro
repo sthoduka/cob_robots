@@ -125,7 +125,10 @@
 	<property name="def_cam3d_x" value="-0.06"/>
 	<property name="def_cam3d_y" value="0.055"/>
 	<property name="def_cam3d_z" value="0.0"/>
-	<property name="def_cam3d_roll" value="1.57079632679"/>
+	<!--property name="def_cam3d_roll" value="1.57079632679"/>
 	<property name="def_cam3d_pitch" value="-1.57079632679"/>
+	<property name="def_cam3d_yaw" value="0.0"/-->
+	<property name="def_cam3d_roll" value="3.14159265359"/>
+	<property name="def_cam3d_pitch" value="3.1415926535"/>
 	<property name="def_cam3d_yaw" value="0.0"/>
 </robot>
