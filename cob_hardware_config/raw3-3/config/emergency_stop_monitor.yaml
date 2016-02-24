@@ -1,1 +1,5 @@
-# NO PARAMETERS YET TO SPECIFY
+sound_enabled: False
+led_enabled: True
+diagnostics_based: True
+motion_based: True
+led_components: [light]

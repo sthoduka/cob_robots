@@ -1,46 +1,35 @@
-# http://ros.org/doc/groovy/api/catkin/html/user_guide/supposed.html
 cmake_minimum_required(VERSION 2.8.3)
 project(cob_controller_configuration_gazebo)
 
 find_package(catkin REQUIRED COMPONENTS roslaunch)
 
-# rostest for robots
+catkin_package()
+
 set(robotlist
-cob3-1
-cob3-2
-cob3-3
-cob3-4
-cob3-5
-cob3-6
-cob3-7
-cob3-8
-cob4-1
-raw3-1
-raw3-2
-raw3-3
-raw3-4
-raw3-5
-raw3-6
-desire
+  cob3-6
+  cob3-9
+  cob4-1
+  cob4-2
+  cob4-3
+  cob4-4
+  cob4-6
+  raw3-1
+  raw3-2
+  raw3-3
+  raw3-4
+  raw3-5
+  raw3-6
 )
 
-# loop through list of robots for testing
-foreach(robot ${robotlist})
-  message("testing for robot: ${robot}")
-  roslaunch_add_file_check(launch/robots/default_controllers_${robot}.launch)
-endforeach(robot)
+if(CATKIN_ENABLE_TESTING)
+  foreach(robot ${robotlist})
+    message("testing for robot: ${robot}")
+    roslaunch_add_file_check(launch/robots/default_controllers_${robot}.launch)
+  endforeach()
+endif()
 
-catkin_package(
-  CATKIN_DEPENDS
-)
-
-
-## Mark cpp header files for installation
+### INSTALL ###
 install(DIRECTORY launch
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-
-install(DIRECTORY controller
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 

@@ -1,4 +1,7 @@
 joint_names: ["arm_1_joint","arm_2_joint","arm_3_joint","arm_4_joint","arm_5_joint","arm_6_joint","arm_7_joint"]
+action_name: /arm/joint_trajectory_controller/follow_joint_trajectory
+service_ns: /arm/driver
+default_vel: 0.3
 
 # back side positions
 home: [[0.0,0.0,0.0,0.0,0.0,0.0,0.0]]
@@ -14,8 +17,6 @@ intermediateback: [[2.2222137451171875, -0.99453413486480713, 1.8660991191864014
 intermediatefront: [[-0.16980814933776855, -0.43355348706245422, 1.7840240001678467, 1.8985545635223389, -0.48893314599990845, 0.84258431196212769, 0.28832489252090454]]
 wavein: [[-0.1, 0.5, 0.0, 0.5, 0.0, 0.5, -1.5708]]
 waveout: [[-0.1, 0.5, 0.0, -0.5, 0.0, -0.5, -1.5708]]
-
-
 
 # trajectories
 folded-to-look_at_table: [pre_look_at_table,look_at_table]

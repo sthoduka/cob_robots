@@ -1,0 +1,6 @@
+sound_enabled: False
+led_enabled: False
+diagnostics_based: False
+motion_based: False
+led_components: [light]
+color_ok: green
