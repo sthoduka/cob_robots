@@ -1,5 +1,5 @@
 sound_enabled: False
-led_enabled: False
+led_enabled: True
 diagnostics_based: False
 motion_based: False
 led_components: [light]
