@@ -13,10 +13,10 @@ analyzers:
         type: diagnostic_aggregator/GenericAnalyzer
         path: pc2
         contains: 'pc2 CPU'
-      pc3:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: pc3
-        contains: 'pc3 CPU'
+      #pc3:
+      #  type: diagnostic_aggregator/GenericAnalyzer
+      #  path: pc3
+      #  contains: 'pc3 CPU'
 
 #  network:
 #    type: diagnostic_aggregator/AnalyzerGroup
@@ -34,11 +34,11 @@ analyzers:
     type: diagnostic_aggregator/AnalyzerGroup
     path: IO
     analyzers:
-      sound:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Sound
-        contains: 'sound'
-        timeout: 15
+      #sound:
+      #  type: diagnostic_aggregator/GenericAnalyzer
+      #  path: Sound
+      #  contains: 'sound'
+      #  timeout: 15
       joystick:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Joystick
@@ -60,16 +60,16 @@ analyzers:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Scan Front
         contains: 'laser_front'
-      stereo_left:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Stereo (Left)
-        contains: left
-        startswith: ['stereo/left/image_color']
-      stereo_right:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: Stereo (Right)
-        contains: right
-        startswith: ['stereo/right/image_color']
+      #stereo_left:
+      #  type: diagnostic_aggregator/GenericAnalyzer
+      #  path: Stereo (Left)
+      #  contains: left
+      #  startswith: ['stereo/left/image_color']
+      #stereo_right:
+      #  type: diagnostic_aggregator/GenericAnalyzer
+      #  path: Stereo (Right)
+      #  contains: right
+      #  startswith: ['stereo/right/image_color']
 
   motors:
     type: diagnostic_aggregator/AnalyzerGroup
@@ -91,10 +91,10 @@ analyzers:
         type: diagnostic_aggregator/GenericAnalyzer
         path: Head
         contains: 'head'
-      arm:
-        type: diagnostic_aggregator/GenericAnalyzer
-        path: LWA
-        contains: 'arm'
+      #arm:
+      #  type: diagnostic_aggregator/GenericAnalyzer
+      #  path: LWA
+      #  contains: 'arm'
       base:
         type: diagnostic_aggregator/AnalyzerGroup
         path: Base
