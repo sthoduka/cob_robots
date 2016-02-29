@@ -29,6 +29,7 @@ run_button: 7
 head_sss_default_target_button: 0
 tray_sss_default_target_button: 1
 torso_sss_default_target_button: 2
+gripper_sss_default_target_button: 3
 
 #mode3: Velocity group controller
 #arm_joint1_button: 0
@@ -63,6 +64,11 @@ components: {
   tray: {
     sss_default_target: "down",
     velocity_topic_name: "/tray/joint_group_velocity_controller/command",
+    joint_velocity: [0.05]
+  },
+  gripper: {
+    sss_default_target: "fist",
+    velocity_topic_name: "/gripper/joint_group_velocity_controller/command",
     joint_velocity: [0.05]
   }
 }
