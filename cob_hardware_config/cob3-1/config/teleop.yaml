@@ -26,18 +26,23 @@ init_button: 9
 run_button: 7
 
 #mode2: Trajectory controller
-torso_sss_default_target_button: 1
-head_sss_default_target_button: 3
-arm_sss_default_target_button: 2
+head_sss_default_target_button: 0
+tray_sss_default_target_button: 1
+torso_sss_default_target_button: 2
 
 #mode3: Velocity group controller
-arm_joint1_button: 0
-arm_joint2_button: 1
-arm_joint3_button: 2
-arm_joint4_button: 3
+#arm_joint1_button: 0
+#arm_joint2_button: 1
+#arm_joint3_button: 2
+#arm_joint4_button: 3
+head_joint1_button: 0
+tray_joint1_button: 1
+torso_joint1_button: 2
+torso_joint2_button: 3
 
-up_down_button: 5
-right_left_button: 4
+
+up_down_button: 4
+right_left_button: 5
 
 components: {
   base: {
@@ -55,9 +60,9 @@ components: {
     velocity_topic_name: "/head/joint_group_velocity_controller/command",
     joint_velocity: [0.05]
   },
-  arm: {
-    sss_default_target: "home",
-    velocity_topic_name: "/arm/joint_group_velocity_controller/command",
-    joint_velocity: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05]
+  tray: {
+    sss_default_target: "down",
+    velocity_topic_name: "/tray/joint_group_velocity_controller/command",
+    joint_velocity: [0.05]
   }
 }
