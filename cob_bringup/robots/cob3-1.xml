@@ -84,15 +84,6 @@
 			<arg name="component_name" value="tray"/>
 		</include>
 
-		<!--include file="$(find cob_bringup)/drivers/schunk_powercube_chain_driver.launch" >
-			<arg name="robot" value="$(arg robot)" />
-			<arg name="component_name" value="arm" />
-		</include>
-		<include file="$(find cob_bringup)/controllers/cob_trajectory_controller.launch">
-			<arg name="robot" value="$(arg robot)"/>
-			<arg name="component_name" value="arm"/>
-		</include-->
-
 		<include file="$(find cob_bringup)/drivers/schunk_sdh.launch" >
 			<arg name="robot" value="$(arg robot)" />
 		</include>
@@ -106,9 +97,6 @@
 			<arg name="robot" value="$(arg robot)" />
 			<arg name="component_name" value="light" />
 		</include>
-		<!--include file="$(find cob_bringup)/drivers/tray_sensors.launch" >
-			<arg name="robot" value="$(arg robot)" />
-		</include-->
 
 		<!-- start additional packages -->
 		<include file="$(find cob_bringup)/tools/diagnostics_aggregator.launch" >
@@ -139,17 +127,7 @@
 			<arg name="robot" value="$(arg robot)" />
 			<arg name="pc" value="$(arg pc2)" />
 		</include>
-
-		<!-- start camera sensors -->
-		<!--include file="$(find cob_bringup)/drivers/prosilica.launch" >
-			<arg name="robot" value="$(arg robot)" />
-			<arg name="name" value="left"/>
-		</include>
-		<include file="$(find cob_bringup)/drivers/prosilica.launch" >
-			<arg name="robot" value="$(arg robot)" />
-			<arg name="name" value="right"/>
-		</include-->
-		
+	
 		<include file="$(find cob_bringup)/drivers/openni.launch" >
 			<arg name="robot" value="$(arg robot)" />
 			<arg name="name" value="cam3d"/>
