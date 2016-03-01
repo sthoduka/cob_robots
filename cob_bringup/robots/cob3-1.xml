@@ -6,6 +6,7 @@
 	<arg name="pc1" default="localhost"/>
 	<arg name="pc2" default="localhost"/>
 	<arg name="pc3" default="localhost"/>
+	<arg name="env_script" default="$(find cob_bringup)/env.sh" />
 
 	<!-- upload robot description -->
 	<include file="$(find cob_hardware_config)/common/upload_robot.launch" >
@@ -151,6 +152,6 @@
 	</group>
 
 
-	<machine name="pc1" address="$(arg pc1)" env-loader="$(find cob_bringup)/env.sh" default="true" timeout="30"/>
+	<machine name="pc1" address="$(arg pc1)" env-loader="$(arg env_script)" default="true" timeout="30"/>
 
 </launch>
