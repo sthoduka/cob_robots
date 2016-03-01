@@ -17,7 +17,7 @@
 	<include file="$(find cob_default_robot_config)/cob3-1/upload_param_cob3-1.launch" />
 
 	<group>
-		<machine name="pc1" address="$(arg pc1)" env-loader="$(find cob_bringup)/env.sh" default="true" timeout="30"/>
+		<machine name="pc1" address="$(arg pc1)" env-loader="$(arg env_script)" default="true" timeout="30"/>
 
 		<include file="$(find cob_bringup)/tools/pc_monitor.launch" >
 			<arg name="robot" value="$(arg robot)" />
@@ -122,7 +122,7 @@
 	</group>
 
 	<group>
-		<machine name="pc2" address="$(arg pc2)" env-loader="$(find cob_bringup)/env.sh" default="true" timeout="30"/>
+		<machine name="pc2" address="$(arg pc2)" env-loader="$(arg env_script)" default="true" timeout="30"/>
 
 		<include file="$(find cob_bringup)/tools/pc_monitor.launch" >
 			<arg name="robot" value="$(arg robot)" />
