@@ -147,8 +147,7 @@
 		</include-->
 
 		<!-- start additional packages -->
-		<!--param name="/sound_controller/mode" value="cepstral" />
-		<include file="$(find cob_bringup)/drivers/sound.launch" /-->
+		<include file="$(find cob_bringup)/drivers/sound.launch" />
 	</group>
 
 
