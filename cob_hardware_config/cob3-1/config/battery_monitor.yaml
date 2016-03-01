@@ -6,5 +6,5 @@ enable_light: false
 num_leds: 1
 light_components: ['light']
 
-enable_sound: false
+enable_sound: true
 sound_components: ['sound']

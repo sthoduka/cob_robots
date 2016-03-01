@@ -7,7 +7,7 @@ joy_num_buttons: 12
 joy_num_axes: 6
 joy_num_modes: 4
 mode_switch_button: 8
-enable_sound: false
+enable_sound: true
 enable_light: false
 light_action_name: /light/set_light
 
