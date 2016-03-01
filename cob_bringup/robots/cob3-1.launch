@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <launch>
+	<arg name="env_script" default="$(find cob_bringup)/env.sh" />
 
 	<include file="$(find cob_bringup)/robots/cob3-1.xml" >
 		<arg name="pc1" value="cob3-1-pc1"/>
 		<arg name="pc2" value="cob3-1-pc2"/>
+		<arg name="env_script" default="$(arg env_script)" />
 	</include>
 
 </launch>
