@@ -5,5 +5,6 @@ num_leds: 1
 invert_output: false
 pubmarker: true
 marker_frame: /torso_base_link # marker will be publised at [dMarkerXOffset,0.0] with respect to marker_frame
+marker_x_offset: 0.15
 startup_color: [0.0, 1.0, 0.0, 1.0] #rgba value
 startup_mode: Static #possible values: None, Static, Breath, BreathColor, Flash, FadeColor
