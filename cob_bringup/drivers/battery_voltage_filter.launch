@@ -8,6 +8,8 @@
 		<rosparam command="load" file="$(find cob_hardware_config)/$(arg robot)/config/battery_voltage_filter.yaml" />
 		<param name="robot_name" value="$(arg robot)" />
 		<param name="mode" value="$(arg mode)" />
+		<remap from="~voltage" to="/relayboard_controller/voltage" />
+		<remap from="~temperature" to="/relayboard_controller/temperature" />
 	</node>
 
 </launch>
