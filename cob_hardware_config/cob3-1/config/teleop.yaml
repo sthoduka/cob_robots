@@ -56,7 +56,7 @@ components: {
   torso: {
     sss_default_target: "home",
     velocity_topic_name: "/torso/joint_group_velocity_controller/command",
-    joint_velocity: [0.05, 0.05, 0.05, 0.05]
+    joint_velocity: [0.1, 0.1, 0.1, 0.1]
   },
   head: {
     sss_default_target: "front",
@@ -66,7 +66,7 @@ components: {
   tray: {
     sss_default_target: "down",
     velocity_topic_name: "/tray/joint_group_velocity_controller/command",
-    joint_velocity: [0.05]
+    joint_velocity: [0.1]
   },
   gripper: {
     sss_default_target: "fist",
