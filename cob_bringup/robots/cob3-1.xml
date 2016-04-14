@@ -62,9 +62,9 @@
 		<include file="$(find cob_bringup)/controllers/base_controller.launch" >
 			<arg name="robot" value="$(arg robot)" />
 		</include>
-		<include file="$(find cob_bringup)/tools/base_collision_observer.launch" >
+		<!--include file="$(find cob_bringup)/tools/base_collision_observer.launch" >
 			<arg name="robot" value="$(arg robot)" />
-		</include>
+		</include-->
 
 		<!-- upper robot -->
 		<include file="$(find cob_bringup)/drivers/schunk_powercube_chain_driver.launch" >
