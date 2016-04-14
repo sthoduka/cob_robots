@@ -129,7 +129,7 @@
 			<arg name="pc" value="$(arg pc2)" />
 		</include>
 	
-		<include file="$(find cob_bringup)/drivers/openni.launch" >
+		<include file="$(find cob_bringup)/drivers/openni2.launch" >
 			<arg name="robot" value="$(arg robot)" />
 			<arg name="name" value="cam3d"/>
 			<arg name="device_id" value="#1"/>
